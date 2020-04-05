@@ -1,6 +1,11 @@
 # plovermodifiers
 Plover modifiers using # key
 
+## Issues
+This is a _work in progress_.  Overall I like the direction, but there are a couple of issues...
+1. For modifier keystrokes (like Ctrl+Arrow or Page Down) that typically move the cursor, this generator does NOT add the {} nothing translation to cancel capitalization and such.  My current thinking is that will have to be added manually given that what moves the cursor may differ from program to program.
+2. The two-stroke option _may_ work with Plover's default number system, but I haven't tested that yet.  If anyone wants to try it and let me know where there are conflicts I can see if a simple change will fix it.  (The one-stroke) option using # will likely never work with Plover default numbers.
+
 ## Usage
 1. Download the files in this repo (specifical generator.html and generator.js) to an empty folder.  
 2. Open generator.html in your browser.
