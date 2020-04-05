@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<script src="generator.js"></script>
+</head>
+<body>
+<h2>Generate a modifiers dictionary.</h2>
+<p>
+<strong>Usage:</strong> Use this to generate a dictionary of modifiers (Ctrl, Shift, Alt, Super (Win), Function keys, and all combos/shortcuts.<br>
+<strong>Choices:</strong>Select "Phoenix" to use Phoenix letters instead of Plover.<br>
+<strong>Execute!:</strong>Click "Generate Dictionaries"
+<strong>Result:</strong>You will get three single stroke dictionaries, and three two stroke dictionaries:
+<ul>
+	<li>Real: When loaded in Plover this will execute the modifiers when stroked.</li>
+	<li>Practice: When loaded in Plover (use _instead of_ Real) print out the modifiers when stroked for practice purposes.</li>
+	<li>StenoJig: This is in StenoJig Translations format.  Use this along with Practice dictionary loaded in Plover to practice modifiers using Stenojig exercises.</li>
+	<li>StenoJig All Exercises: This is a StenoJig exercise (using Practice output) for ALL generated single stroke modifier entries.</li>
+</ul>
+</p>
+<label for="Theory">Theory: </label><br>
+<select name="Theory">
+<option value ="plover">plover</option>
+<option value ="phoenix" selected>phoenix</option>
+</select><br>
+<button onClick="calculateJSON()">Generate Dictionaries</button><br>
+<table border="1">
+	<tr><td colspan="3"><strong>Generated Dictionaries:</strong></td></tr>
+	<tr><td colspan="3">Single Stroke</td></tr>
+	<tr><td>Real</td><td>Practice</td><td>Stenojig</td></tr>
+	<tr><td><textarea id="dicOutputSingleReal" rows="10" cols="50">Output</textarea></td><td><textarea id="dicOutputSinglePractice" rows="10" cols="50">Output</textarea></td><td><textarea id="dicOutputSingleStenojig" rows="10" cols="50">Output</textarea></td></tr>
+	<tr><td colspan="3">Two Stroke</td></tr>
+	<tr><td>Real</td><td>Practice</td><td>Stenojig</td></tr>
+	<tr><td><textarea id="dicOutputTwoReal" rows="10" cols="50">Output</textarea></td><td><textarea id="dicOutputTwoPractice" rows="10" cols="50">Output</textarea></td><td><textarea id="dicOutputTwoStenojig" rows="10" cols="50">Output</textarea></td></tr>
+	<tr><td colspan="3">StenoJig All Exercise</td></tr>
+	<tr><td colspan="3"><textarea id="stenoJigOutputAll" rows="10" cols="150">Output</textarea></td></tr>
+</table>
+</body>
+</html>
+
