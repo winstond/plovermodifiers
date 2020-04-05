@@ -7,7 +7,7 @@ This is a _work in progress_.  Overall I like the direction, but there are a cou
 2. The two-stroke option _may_ work with Plover's default number system, but I haven't tested that yet.  If anyone wants to try it and let me know where there are conflicts I can see if a simple change will fix it.  (The one-stroke) option using # will likely never work with Plover default numbers.
 
 ## Usage
-1. Download the files in this repo (specifical generator.html and generator.js) to an empty folder.  
+1. Download the files in this repo (specifically generator.html and generator.js) to an empty folder.  
 2. Open generator.html in your browser.
 3. Select "Plover" or "Phoenix" for your theory.
 (Note: All this does is change two letters, AOEU for I and SWR for Z)
