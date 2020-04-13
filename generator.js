@@ -46,7 +46,10 @@ function calculateJSON() {
 		bracketleft: 'PWHE',
 		bracketright: 'PWRE',
 		period: 'PE',
-		semicolon: 'WHR',
+		comma: 'KRE',
+		semicolon: 'WHRE',
+		quotedbl: 'PHRE',
+		multiply: 'STRE',
 		a: 'A',
 		b: 'PW',
 		c: 'KR',
@@ -151,12 +154,14 @@ function calculateJSON() {
 		let dictionary = {}
 		let dictType = 'practice'
 		for(let i=0; i<ModifierCombos.length; ++i) {
-			const mods = ModifierCombos[i]	
-			for (const [keyTranslation, keyStroke] of keyEntries) {
-				let tempDictEntry = buildDictEntry(mods,keyTranslation,keyStroke,dictType,bSingleStroke)
-				if (tempDictEntry!=='') Object.assign(dictionary,tempDictEntry)
-				//This also works...
-				//if (tempDictEntry!=='') dictionary[Object.keys(tempDictEntry)[0]]=Object.values(tempDictEntry)[0]
+			const mods = ModifierCombos[i]
+			if(mods.length==0){
+				for (const [keyTranslation, keyStroke] of keyEntries) {
+					let tempDictEntry = buildDictEntry(mods,keyTranslation,keyStroke,dictType,bSingleStroke)
+					if (tempDictEntry!=='') Object.assign(dictionary,tempDictEntry)
+					//This also works...
+					//if (tempDictEntry!=='') dictionary[Object.keys(tempDictEntry)[0]]=Object.values(tempDictEntry)[0]
+				}
 			}
 		}
 		let strExercise = '"' + Object.values(dictionary).join('","') + '"'
